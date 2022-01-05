@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 import { natsWrapper } from '../../nats-wrapper'
 import { Ticket } from '../../models/ticket'
 
+jest.setTimeout(10000)
+
 it('returns a 404 if provided id does not exist', async () => {
   const id = new mongoose.Types.ObjectId().toHexString()
 
